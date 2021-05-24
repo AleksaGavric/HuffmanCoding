@@ -1,7 +1,3 @@
-/*Aleksa Gavric Project 2 source code*/
-
-package proj3_upload;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -30,7 +26,7 @@ class HuffManComparator implements Comparator<HuffmanNode> {
    }
 }
 
-public class HuffmanSubmit implements Huffman {
+public class Compression implements Huffman {
 
    private static Map<Character, Integer> getCharFrequency(String input) {
       HashMap<Character, Integer> freqMap = new HashMap();
@@ -187,7 +183,7 @@ public class HuffmanSubmit implements Huffman {
    }
 
    public static void main(String[] args) {
-      Huffman  huffman = new HuffmanSubmit();
+      Huffman huffman = new Compression();
 
       huffman.encode("ur.jpg", "ur.enc", "freq.txt");
       huffman.decode("ur.enc", "ur_dec.jpg", "freq.txt");
